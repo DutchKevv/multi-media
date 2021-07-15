@@ -2,8 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const app = express()
 const port = 3100
-const SocialPost = require("social-post-api");
-const API_KEY = "X6N4E8R-1P94BNN-PFE1WV9-FTMJ301";
 const { join } = require('path');
 const Reddit = require('reddit')
 
