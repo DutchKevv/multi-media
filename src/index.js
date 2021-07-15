@@ -37,9 +37,9 @@ app.post('/post', async (req, res) => {
             sr: body.channel,
             kind: 'self',
             // resubmit: true,
-            body: 'asdfasdfdfs',
-            text: 'asdfasdfdfs',
-            title: 'ReligionCoin',
+            body: body.content,
+            text: body.content,
+            title: body.title,
             url: 'https://religioncoin.info'
         });
 
