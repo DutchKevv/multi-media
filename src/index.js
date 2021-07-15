@@ -1,5 +1,5 @@
 const SocialPost = require("social-post-api");
-const API_KEY = "X6N4E8R-1P94BNN-PFE1WV9-FTMJ301"; // get an API Key at ayrshare.com
+const API_KEY = "X6N4E8R-1P94BNN-PFE1WV9-FTMJ301"; 
 const social = new SocialPost(API_KEY);
 
 // fuck m
