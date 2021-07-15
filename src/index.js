@@ -7,5 +7,5 @@ social.post({
     post: "One more time", // content
     platforms: ["twitter", "facebook", "linkedin"]
 }).catch(error => {
-    // send SMS / EMAIL to Wytze, Kewin, Indy
+    // on error, send SMS / EMAIL to Wytze, Kewin, Indy
 })
