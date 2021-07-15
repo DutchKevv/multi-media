@@ -4,7 +4,6 @@ const app = express()
 const port = 3100
 const SocialPost = require("social-post-api");
 const API_KEY = "X6N4E8R-1P94BNN-PFE1WV9-FTMJ301";
-const social = new SocialPost(API_KEY);
 const { join } = require('path');
 const Reddit = require('reddit')
 
@@ -12,8 +11,7 @@ const reddit = new Reddit({
     username: 'religioncoin',
     password: 'GeileMuntjes01',
     appId: '-RiNpwsHbVdbs8JLu_M83Q',
-    appSecret: 'AkpnWFPH9LLnEk2T6sDENJSFGrCXKg',
-    //   userAgent: 'MyApp/1.0.0 (http://example.com)'
+    appSecret: 'AkpnWFPH9LLnEk2T6sDENJSFGrCXKg'
 });
 
 // console.log(reddit)
@@ -30,9 +28,11 @@ app.post('/post', async (req, res) => {
 
     console.log('content', body.content)
 
-    try {
 
-        // Submit a link to the /r/BitMidi subreddit
+    // REDIT CODE
+    try {
+        // Submit to a specific schannel 
+        // TODO - use AI to find crypto channels
         const redditRes = await reddit.post('/api/submit', {
             sr: body.channel,
             kind: 'self',
@@ -50,9 +50,15 @@ app.post('/post', async (req, res) => {
         res.send(error);
     }
 
+    // FB CODE
+    // TODO -
+    // TIKTOK CODE
+    // TODO -
+    // TWITTER CODE
+    // TODO -
 
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`App listening at http://localhost:${port}`)
 })
